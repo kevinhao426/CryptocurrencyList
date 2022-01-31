@@ -41,6 +41,21 @@ class MainViewModel @Inject constructor() : ViewModel() {
                 }
             }
         }
+    }
 
+    fun clearDB(appDatabase: AppDatabase) {
+        viewModelScope.launch {
+            appDatabase.currencyDataDao().deleteAll()
+            currencyListLiveData.postValue(listOf())
+        }
+    }
+
+    fun sortCurrencyList() {
+        currencyListLiveData.value?.let {
+            val sortedList = it.sortedBy { item ->
+                item.id
+            }
+            currencyListLiveData.postValue(sortedList)
+        }
     }
 }

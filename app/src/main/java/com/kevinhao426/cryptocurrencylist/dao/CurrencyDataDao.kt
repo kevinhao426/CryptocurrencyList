@@ -13,4 +13,7 @@ interface CurrencyDataDao {
 
     @Delete
     suspend fun delete(data: CurrencyData)
+
+    @Query("DELETE FROM CurrencyData")
+    suspend fun deleteAll()
 }

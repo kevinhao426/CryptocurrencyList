@@ -2,7 +2,6 @@ package com.kevinhao426.cryptocurrencylist.di
 
 import android.app.Application
 import android.content.Context
-import androidx.room.Room
 import com.kevinhao426.cryptocurrencylist.dao.AppDatabase
 import dagger.Module
 import dagger.Provides
@@ -19,6 +18,5 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideRoom(context: Context): AppDatabase =
-        Room.databaseBuilder(context, AppDatabase::class.java, "CurrencyDemoDB").build()
+    fun provideRoom(context: Context): AppDatabase = AppDatabase.getDataBase(context)
 }
