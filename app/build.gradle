@@ -62,6 +62,9 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.4.0")
     implementation("androidx.fragment:fragment-ktx:1.4.1")
 
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.9'
+
     //Logging: timber
     implementation 'com.jakewharton.timber:timber:5.0.1'
 }

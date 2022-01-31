@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Cryptocurrency List</string>
+    <string name="dataError">There\'s an error in json file</string>
 </resources>
