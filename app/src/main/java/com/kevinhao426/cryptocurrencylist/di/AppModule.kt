@@ -19,6 +19,6 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideRoom(context: Context) =
+    fun provideRoom(context: Context): AppDatabase =
         Room.databaseBuilder(context, AppDatabase::class.java, "CurrencyDemoDB").build()
 }
