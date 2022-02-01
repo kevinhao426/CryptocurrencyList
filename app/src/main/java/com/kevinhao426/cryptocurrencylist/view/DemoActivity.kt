@@ -5,6 +5,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.kevinhao426.cryptocurrencylist.dao.AppDatabase
 import com.kevinhao426.cryptocurrencylist.databinding.ActivityDemoBinding
+import com.kevinhao426.cryptocurrencylist.utils.replaceFragment
 import com.kevinhao426.cryptocurrencylist.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -25,7 +26,13 @@ class DemoActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+        initFragment()
         bindUIEvent()
+        viewModel.fetchCurrencyList(this, appDatabase)
+    }
+
+    private fun initFragment() {
+        supportFragmentManager.replaceFragment(CurrencyListFragment.newInstance())
     }
 
     private fun bindUIEvent() {

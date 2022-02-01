@@ -3,6 +3,7 @@ package com.kevinhao426.cryptocurrencylist.di
 import android.app.Application
 import android.content.Context
 import com.kevinhao426.cryptocurrencylist.dao.AppDatabase
+import com.kevinhao426.cryptocurrencylist.view.CurrencyListAdapter
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
