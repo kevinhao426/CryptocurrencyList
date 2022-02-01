@@ -4,14 +4,14 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.kevinhao426.cryptocurrencylist.dao.AppDatabase
-import com.kevinhao426.cryptocurrencylist.databinding.ActivityMainBinding
+import com.kevinhao426.cryptocurrencylist.databinding.ActivityDemoBinding
 import com.kevinhao426.cryptocurrencylist.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+class DemoActivity : AppCompatActivity() {
+    lateinit var binding: ActivityDemoBinding
 
     @Inject
     lateinit var appDatabase: AppDatabase
@@ -20,8 +20,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityDemoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.hide()
 
         bindUIEvent()
     }
@@ -39,6 +41,4 @@ class MainActivity : AppCompatActivity() {
             viewModel.sortCurrencyList()
         }
     }
-
-
 }

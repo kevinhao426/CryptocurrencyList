@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptocurrencyList">
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.DemoActivity"
             android:exported="true"
             android:screenOrientation="locked">
             <intent-filter>

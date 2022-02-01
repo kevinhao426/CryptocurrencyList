@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bg_circle_20dp.xml" value="0.4235" />
+        <entry key="app/src/main/res/drawable/ic_next_24.xml" value="0.4235" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.4235" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5388888888888889" />
+        <entry key="app/src/main/res/layout/fragment_currency_list.xml" value="0.5911458333333334" />
+        <entry key="app/src/main/res/layout/item_currency.xml" value="0.34375" />
       </map>
     </option>
   </component>
